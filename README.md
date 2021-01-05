@@ -157,7 +157,8 @@ Una mirada a los archivos y directorios de nivel superior que verá en este proy
     |   ├── utils/
     |   ├── App.js
     |   ├── index.js
-    |   └── serviceWorker.js
+    |   ├── reportWebVitals.js
+    |   └── routes.js
     ├── .gitignore
     ├── package-lock.json
     ├── package.json
@@ -184,7 +185,9 @@ Una mirada a los archivos y directorios de nivel superior que verá en este proy
 
     8. **`/index.js`**: Punto de entrada JavaScript; Importa nuestro componente App.js y le dice a React dónde renderizarlo.
 
-    9. **`/serviceWorker.js`**: Script que el navegador ejecuta en segundo plano, separado de una página web, lo que abre la puerta a funciones que no necesitan una página web o la interacción del usuario.
+    9. **`/reportWebVitals.js`**: Script que el navegador ejecuta en segundo plano, separado de una página web, lo que abre la puerta a funciones que no necesitan una página web o la interacción del usuario.
+
+    10. **`/routes.js`**: Rutas que se gestionarán dentro del aplicativo.
 
 3. **`.gitignore`**: Este archivo le dice a git para qué archivos no debe rastrear / no mantener un historial de versiones.
 
