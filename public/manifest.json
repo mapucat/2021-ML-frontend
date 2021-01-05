@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ML-frontend",
+  "name": "Test Práctico - Frontend",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,18 +8,38 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "../src/assets/images/search18.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "18x18"
     },
     {
-      "src": "logo512.png",
+      "src": "../src/assets/images/search36.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "36x36"
+    },
+    {
+      "src": "../src/assets/images/shipping18.png",
+      "type": "image/png",
+      "sizes": "18x18"
+    },
+    {
+      "src": "../src/assets/images/shipping36.png",
+      "type": "image/png",
+      "sizes": "36x36"
+    },
+    {
+      "src": "../src/assets/images/logo.png",
+      "type": "image/png",
+      "sizes": "53x36"
+    },
+    {
+      "src": "../src/assets/images/logo106x72.png",
+      "type": "image/png",
+      "sizes": "106x72"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#FFE600",
+  "background_color": "#EEEEEE"
 }
