@@ -154,6 +154,13 @@ Una mirada a los archivos y directorios de nivel superior que verá en este proy
     |   ├── pages/
     |   ├── services/
     |   ├── styles/
+    |   |   ├── elements/
+    |   |   ├── generic/
+    |   |   ├── settings/
+    |   |   ├── tools/
+    |   |   ├── utilities/
+    |   |   ├── vendor/
+    |   |   └── index.js
     |   ├── utils/
     |   ├── App.js
     |   ├── index.js
@@ -178,6 +185,18 @@ Una mirada a los archivos y directorios de nivel superior que verá en este proy
     4. **`/services`**: Guarda todos los servicios que se comunicarán con el api.
 
     5. **`/styles`**: Estilos SASS generales.
+
+        1. **`/elements`**: Estilo para etiquetas HTML (como H1, A, etc.). Estos vienen con un estilo predeterminado del navegador para que podamos redefinirlos aquí.
+
+        2. **`/generic`**: Restablecer y / o normalizar estilos, la definición de box-sizing, etc.
+
+        3. **`/settings`**: Se utiliza con preprocesadores y contiene fuentes, definiciones de colores, etc.
+
+        4. **`/tools`**: Mixins y funciones de uso global.
+
+        5. **`/utilities`**: Utilidades y clases de ayuda.
+
+        6. **`/vendor`**: **Esta carpeta se usa para guardar los estilos de componentes importados.**
 
     6. **`/utils`**: Guarda funciones y clases que pueden ser usadas de forma transversal en el aplicativo.
 
