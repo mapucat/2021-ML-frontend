@@ -146,6 +146,7 @@ Una mirada a los archivos y directorios de nivel superior que verá en este proy
     ├── node_modules/
     ├── src/
     |   ├── assets/
+    |   ├── common/
     |   ├── components/
     |   |   ├── atoms/
     |   |   ├── molecules/
@@ -178,13 +179,15 @@ Una mirada a los archivos y directorios de nivel superior que verá en este proy
 
     1. **`/assets`**: Éste directorio contiene todos los recursos necesarios que serán usados en éste proyecto.
 
-    2. **`/components`**: Éste directorio contiene todos los componentes necesarios, implementados de forma que se use el paradigma de atomic design.
+    2. **`/common`**: Éste directorio contienen datos transversales al aplicativo como constantes o variables por ambiente.
 
-    3. **`/pages`**: Páginas que serán renderizadas en el proyecto.
+    3. **`/components`**: Éste directorio contiene todos los componentes necesarios, implementados de forma que se use el paradigma de atomic design.
 
-    4. **`/services`**: Guarda todos los servicios que se comunicarán con el api.
+    4. **`/pages`**: Páginas que serán renderizadas en el proyecto.
 
-    5. **`/styles`**: Estilos SASS generales.
+    5. **`/services`**: Guarda todos los servicios que se comunicarán con el api.
+
+    6. **`/styles`**: Estilos SASS generales.
 
         1. **`/elements`**: Estilo para etiquetas HTML (como H1, A, etc.). Estos vienen con un estilo predeterminado del navegador para que podamos redefinirlos aquí.
 
@@ -198,15 +201,15 @@ Una mirada a los archivos y directorios de nivel superior que verá en este proy
 
         6. **`/vendor`**: **Esta carpeta se usa para guardar los estilos de componentes importados.**
 
-    6. **`/utils`**: Guarda funciones y clases que pueden ser usadas de forma transversal en el aplicativo.
+    7. **`/utils`**: Guarda funciones y clases que pueden ser usadas de forma transversal en el aplicativo.
 
-    7. **`/App.js`**: Componente principal.
+    8. **`/App.js`**: Componente principal.
 
-    8. **`/index.js`**: Punto de entrada JavaScript; Importa nuestro componente App.js y le dice a React dónde renderizarlo.
+    9. **`/index.js`**: Punto de entrada JavaScript; Importa nuestro componente App.js y le dice a React dónde renderizarlo.
 
-    9. **`/reportWebVitals.js`**: Script que el navegador ejecuta en segundo plano, separado de una página web, lo que abre la puerta a funciones que no necesitan una página web o la interacción del usuario.
+    10. **`/reportWebVitals.js`**: Script que el navegador ejecuta en segundo plano, separado de una página web, lo que abre la puerta a funciones que no necesitan una página web o la interacción del usuario.
 
-    10. **`/routes.js`**: Rutas que se gestionarán dentro del aplicativo.
+    11. **`/routes.js`**: Rutas que se gestionarán dentro del aplicativo.
 
 3. **`.gitignore`**: Este archivo le dice a git para qué archivos no debe rastrear / no mantener un historial de versiones.
 
