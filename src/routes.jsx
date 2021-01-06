@@ -1,12 +1,17 @@
-import { Redirect, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 
+import Layout from './components/templates/layout/layout.template.jsx';
 import React from "react";
+import Search from './pages/search.page.jsx';
 
 const Routes = () => {
   return (
-    <Switch>
-      <Redirect from="/**" exact to="/" />
-    </Switch>
+    <Layout>
+      <Switch>
+        <Route exact path="/" component={Search}/>
+        <Redirect from="/**" exact to="/" />
+      </Switch>
+    </Layout>
   );
 };
 
