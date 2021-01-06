@@ -1,0 +1,27 @@
+@import '../../../styles/settings/settings.scss';
+@import '../../../styles/tools/tools.scss';
+
+.o-header {
+  background-color: color('background', 'tertiary');
+  &__container {
+    width: 60%;
+    margin: 0 auto;
+    padding: calculate-size(15) 0;
+    min-height: calculate-size(70);
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    @include set-breakpoint('grande') {
+      width: 80%;
+    }
+  }
+  
+  &__logo {
+    width: calculate-size(50);
+    margin-right: calculate-size(20);
+  }
+
+  &__form {
+    width: 100%;
+  }
+}
