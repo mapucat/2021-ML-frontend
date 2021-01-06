@@ -15,7 +15,7 @@ $colors: (
     'font': (
       'primary': $dark-gray,
       'secondary': $gray,
-      'terciary': $light-gray,
+      'tertiary': $light-gray,
     ),
     'button': (
         'primary': $gray,
@@ -23,6 +23,7 @@ $colors: (
     ),
     'background': (
         'primary': $light-gray,
-        'secondary': $white
+        'secondary': $white,
+        'tertiary': $yellow
     )
 ) !default;

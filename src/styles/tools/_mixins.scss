@@ -1,5 +1,5 @@
 /* Mixin para crear media queries basadas en el breakpoint */
-@mixin breakpoint($breakpoint, $limit: max) {
+@mixin set-breakpoint($breakpoint, $limit: max) {
     @if map-has-key($breakpoints, $breakpoint) {
         $breakpoint: map_get($breakpoints, $breakpoint);
         @if $limit == min {
@@ -29,4 +29,14 @@
             url($font-path+$font-name+".otf") format("opentype"), /* Open Type Font */
             url($font-path+$font-name+".svg") format("svg"); /* Legacy iOS */
     }
+}
+
+/*
+  * Mixin para agregar el contenido al placeholder con compatibilidad con varios navegadores 
+ */
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}  
 }

@@ -1,0 +1,16 @@
+@import '../../../styles/settings/settings.scss';
+@import '../../../styles/tools/tools.scss';
+
+.a-input {
+  width: 100%;
+  border: none;
+  color: color('font', 'primary'); 
+  border-radius: $border-radius 0 0 $border-radius;
+  padding: calculate-size(10);
+  &:focus {
+    outline: none;
+  }
+  @include placeholder {
+    color: color('font', 'secondary');  
+  }
+}
