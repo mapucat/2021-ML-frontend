@@ -2,8 +2,6 @@
 @import '../../../styles/tools/tools.scss';
 
 .o-header {
-  height: 8vh;
-  min-height: calculate-size(70);
   background-color: color('background', 'tertiary');
   &__container {
     margin: 0 $margin-size;
