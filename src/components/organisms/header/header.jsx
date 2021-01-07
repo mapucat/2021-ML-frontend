@@ -1,40 +1,52 @@
 import './header.scss';
 
-import ItemsService from '../../../services/items.service';
+import { Link, Redirect, useLocation } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+
 import Logo from '../../../assets/images/logo106x72.png';
-import React from 'react';
-import { Redirect } from 'react-router-dom';
 import SearchInput from '../../molecules/search-input/search-input';
 import { useForm } from 'react-hook-form';
 
 const Header = () => {
-  const itemsService = new ItemsService();
-  const { register, handleSubmit } = useForm();
+  const location = useLocation();
+  const searchParam = new URLSearchParams(location.search).get('search');
+  const [search, setSearch] = useState(null);
 
-  const onSubmit = ({ search }) => {
-    const data = null;
-    if (!!search && search.length !== 0) {
-      itemsService.getItems(search).then((response) => {
-        if (!!response.data) {
-          data = response.data;
-        }
-      }).catch((error) => {
-        console.log(error);
-      }).finally(() => {
-        // Redireccionar
-      });
+  const { register, handleSubmit, reset } = useForm({
+    defaultValues: {
+      search: searchParam
     }
+  });
+  
+  useEffect(() => {
+    if (location.pathname === '/') {
+      reset();
+    }
+  }, [location]);
+  
+  const onSubmit = (form) => {
+    if (!!form.search && form.search.length !== 0) {
+      setSearch(form.search);
+      setTimeout(() => {
+        setSearch('');
+      }, 100);
+    }    
   };
 
   return (
+    <React.Fragment>
     <header className='o-header'>
       <div className='o-header__container'>
-        <img className='o-header__logo' src={Logo} alt='Logo de mercado libre'></img>
+        <Link to="/" className='o-header__logo'>
+          <img src={Logo} alt='Logo de mercado libre'></img>
+        </Link>
         <form onSubmit={ handleSubmit(onSubmit) } className='o-header__form'>
-          <SearchInput register={register}/>
+          <SearchInput register={register} name='search'/>
         </form>
       </div>
     </header>
+    { search && <Redirect to={`/items?search=${search}`} /> }
+    </React.Fragment>
   );
 };
 

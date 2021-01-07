@@ -2,18 +2,15 @@
 @import '../../../styles/tools/tools.scss';
 
 .o-header {
+  height: 8vh;
+  min-height: calculate-size(70);
   background-color: color('background', 'tertiary');
   &__container {
-    width: 60%;
-    margin: 0 auto;
+    margin: 0 $margin-size;
     padding: calculate-size(15) 0;
-    min-height: calculate-size(70);
-    height: 8vh;
     display: flex;
     align-items: center;
-    @include set-breakpoint('grande') {
-      width: 80%;
-    }
+    height: inherit;
   }
   
   &__logo {
