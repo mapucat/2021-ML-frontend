@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 
 const ItemsPage = () => {
   const [items, setItems ] = useState(null);
-  const [categories, setCategories] = useState(null)
+  const [categories, setCategories] = useState(null);
   const itemService = new ItemsService();
   
   const search = new URLSearchParams(useLocation().search).get('search');
@@ -34,16 +34,20 @@ const ItemsPage = () => {
       <div className='p-items-page__list'>
         { 
           items ? 
-            items.items.map(item => 
-              <Item 
-                key={item.item.id}
-                id={item.item.id} 
-                imgSrc={item.item.picture}
-                price={item.item.price.amount}
-                isFreeshipping={item.item.free_shipping}
-                name={item.item.title}
-                city={item.item.city_name}
-              />) : null }
+            items.items.map((item, index) => 
+              <React.Fragment key={item.item.id}>
+                <Item 
+                  id={item.item.id} 
+                  imgSrc={item.item.picture}
+                  price={item.item.price.amount}
+                  isFreeshipping={item.item.free_shipping}
+                  name={item.item.title}
+                  city={item.item.city_name}
+                />
+                { index !== items.items.length - 1 ? 
+                  <hr className='p-items-page__divider'/> : null }
+              </React.Fragment>
+              ) : null }
       </div>
     </section>
   );

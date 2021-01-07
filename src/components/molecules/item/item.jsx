@@ -16,9 +16,9 @@ const Item = ({ id, imgSrc, price, isFreeshipping, name, city }) => {
           <CurrencyFormat 
             value={price} 
             displayType={'text'} 
-            thousandSeparator={true} 
-            decimalSeparator='.' 
-            prefix={'$'}/> 
+            thousandSeparator={'.'}
+            decimalSeparator={','}
+            prefix={'$ '}/> 
           { isFreeshipping ? <img src={FreeShippingImg} alt='Envío gratis'></img> : null } 
         </h2>
         <h3 className='m-item__name'>{ name }</h3>
