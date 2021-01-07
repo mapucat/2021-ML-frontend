@@ -9,7 +9,6 @@ export default class ItemsService {
    * @param {*} q 
    */
   getItems = (q) => {
-    console.log(q);
     return axios.get(`${api.MLBACKEND_URL}/items`, {
       params: {
         q
